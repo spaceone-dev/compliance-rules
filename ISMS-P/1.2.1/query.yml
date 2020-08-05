@@ -1,0 +1,28 @@
+---
+query:
+    aggregate:
+        group:
+            keys:
+            - key: server_id
+              name: server_id
+            - key: name 
+              name: server_name
+            - key: project_id
+              name: project_id
+resource_type: inventory.Server
+join:
+- query:
+    aggregate:
+        group:
+            keys:
+            - key: project_id
+              name: project_id
+            - key: name
+              name: project_name
+            fields:
+            - name: member_count
+              operator: count
+  resource_type: identity.Project 
+formulas:
+- formula: member_count < 1
+  operator: QUERY
