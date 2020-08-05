@@ -7,4 +7,7 @@
 # 주요 확인사항
 정보자산의 분류기준을 수립하고 정보보호 및 개인정보보호 관리체계 범위 내의 모든 자산을 식별하여 목록으로 관리하고 있는가?
 
+server_id | name | project_id | project_name | member count
+---
+server-123 | web | project-123 | dev | 3
 
